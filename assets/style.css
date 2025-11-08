@@ -104,15 +104,15 @@ tr:hover {
 
 .btn {
     text-decoration: none;
-    color: white !important; 
+    color: white !important;
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
-    border: none;             
+    border: none;
     cursor: pointer;
-    padding: 10px 15px;       
-    font-size: 14px;          
-    margin-right: 5px;        
+    padding: 10px 15px;
+    font-size: 14px;
+    margin-right: 5px;
 }
 
 /* 2. OS MODIFICADORES (Definem a COR) */
@@ -120,6 +120,7 @@ tr:hover {
 .btn-azul {
     background: #007bff;
 }
+
 .btn-azul:hover {
     background: #0056b3;
 }
@@ -127,6 +128,7 @@ tr:hover {
 .btn-verde {
     background: #28a745;
 }
+
 .btn-verde:hover {
     background: #218838;
 }
@@ -134,6 +136,7 @@ tr:hover {
 .btn-vermelho {
     background: #dc3545;
 }
+
 .btn-vermelho:hover {
     background: #c82333;
 }
