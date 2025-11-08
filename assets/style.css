@@ -1,0 +1,225 @@
+/* Define o body padrão para as páginas de dashboard */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    color: #333;
+    margin: 0;
+}
+
+/* O container principal (largo) para o dashboard */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Cabeçalho (Centralizado) --- */
+.header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header-info h1 {
+    margin: 0;
+    color: #333;
+}
+
+.header-info span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Formulários do Dashboard (Create/Edit) --- */
+.form-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs de formulário para o dashboard */
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* --- Tabela (Read) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.btn {
+    text-decoration: none;
+    color: white !important; 
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    border: none;             
+    cursor: pointer;
+    padding: 10px 15px;       
+    font-size: 14px;          
+    margin-right: 5px;        
+}
+
+/* 2. OS MODIFICADORES (Definem a COR) */
+
+.btn-azul {
+    background: #007bff;
+}
+.btn-azul:hover {
+    background: #0056b3;
+}
+
+.btn-verde {
+    background: #28a745;
+}
+.btn-verde:hover {
+    background: #218838;
+}
+
+.btn-vermelho {
+    background: #dc3545;
+}
+.btn-vermelho:hover {
+    background: #c82333;
+}
+
+/* --- Classes de Mensagem --- */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Essa classe é aplicada no <body> das págs login/register */
+.body-center {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: grid;
+    place-items: center;
+    min-height: 90vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* O container centralizado (pequeno) para login/register */
+.container-center {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-center h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.container-center form div {
+    margin-bottom: 15px;
+}
+
+.container-center label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs de formulário para login/register */
+.container-center input[type="text"],
+.container-center input[type="email"],
+.container-center input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botão de formulário para login/register */
+.container-center button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container-center button:hover {
+    background-color: #0056b3;
+}
+
+.container-center .message {
+    text-align: center;
+}
+
+.login-link,
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}

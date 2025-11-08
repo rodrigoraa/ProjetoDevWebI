@@ -1,8 +1,6 @@
 <?php
 session_start();
-
-include 'config.php';
-
+include 'includes/config.php';
 $mensagem_erro = '';
 
 if (!empty($_POST)) {
@@ -18,35 +16,31 @@ if (!empty($_POST)) {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user && password_verify($senha_digitada, $user['senha'])) {
-                
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['nome'];
                 
                 header('Location: index.php');
                 exit();
-
             } else {
                 $mensagem_erro = "Email ou senha inválidos.";
             }
-
         } catch (PDOException $e) {
             $mensagem_erro = "Erro no banco de dados: " . $e->getMessage();
         }
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Projeto PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="body-center">
 
-    <div class="container">
+    <div class="container-center">
         <h2>Login</h2>
 
         <?php if (!empty($mensagem_erro)): ?>

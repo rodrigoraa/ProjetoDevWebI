@@ -1,27 +1,26 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-include 'config.php';
+include 'includes/config.php';
+$mensagem = '';
 
-$mensagem = ''; 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+if (!empty($_POST)) {
     if (empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['senha'])) {
         $mensagem = "Por favor, preencha todos os campos.";
     } else {
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-
         $senha_hash = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
         try {
-
             $stmt_check = $pdo->prepare("SELECT id FROM users WHERE email = ?");
             $stmt_check->execute([$email]);
             
             if ($stmt_check->fetch()) {
                 $mensagem = "Este email já está cadastrado. Tente outro.";
             } else {
- 
                 $sql = "INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)";
                 $stmt = $pdo->prepare($sql);
                 
@@ -37,18 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Projeto PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="body-center">
 
-    <div class="container">
+    <div class="container-center">
         <h2>Cadastro de Usuário</h2>
 
         <?php if (!empty($mensagem)): ?>
