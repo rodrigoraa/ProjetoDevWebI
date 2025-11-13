@@ -1,5 +1,7 @@
 <?php
-
+/*
+recebe um id via GET e executa o delete no banco e direciona de volta ao index.php
+*/
 session_start();
 include 'config.php';
 

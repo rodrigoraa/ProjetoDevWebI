@@ -1,4 +1,8 @@
 <?php
+
+/*
+cria a variável de ligação $pdo com a base de dados - é usado por tudo que precisa se comunicar com o banco 
+*/
 $db_path = __DIR__ . '/../database/database.db';
 
 try {

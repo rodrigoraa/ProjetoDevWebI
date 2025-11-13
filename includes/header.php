@@ -1,5 +1,10 @@
 <?php
 
+/*
+inicia a session_start()
+verifica se session(user_id) existe e se nao existir expulsa o utilizador para realizar o login
+*/
+
 session_start();
 
 include_once 'config.php';

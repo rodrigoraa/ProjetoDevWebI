@@ -1,5 +1,11 @@
 <?php
-include 'includes/header.php';
+
+/*
+Update - atualizar banco
+via GET, busca os dados no banco e preenche o formulário
+via POST, executa o update
+*/
+include 'header.php';
 
 $user_id = $_SESSION['user_id'];
 $agendamento = null;
@@ -64,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $user_id
             ]);
 
-            header('Location: index.php?msg=editado');
+            header('Location: ../index.php?msg=editado');
             exit();
 
         } catch (PDOException $e) {
@@ -150,15 +156,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <button type="submit" class="btn btn-azul">Salvar Alterações</button>
-            <a href="index.php" class="btn btn-vermelho">Cancelar</a>
+            <a href="../index.php" class="btn btn-vermelho">Cancelar</a>
         </form>
     <?php else: ?>
         <p>Agendamento não encontrado.</p>
-        <a href="index.php">Voltar para o Dashboard</a>
+        <a href="../index.php">Voltar para o Dashboard</a>
     <?php endif; ?>
 
 </div>
 
 <?php
-include 'includes/footer.php';
+include 'footer.php';
 ?>

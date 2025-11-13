@@ -1,4 +1,8 @@
 <?php
+
+/*Aqui foi feito o create e read (criação e leitura)
+Chama o header que obrigado o usuário a estar logado para utilizar do sistema
+*/
 include 'includes/header.php';
 
 $user_id = $_SESSION['user_id'];
@@ -142,7 +146,7 @@ try {
                         <td><?php echo htmlspecialchars($agendamento['cor'] ?? 'Não informada'); ?></td>
                         <td><?php echo date('d/m/Y', strtotime($agendamento['data_agendamento'])); ?></td>
                         <td class="actions">
-                            <a href="edit.php?id=<?php echo $agendamento['id']; ?>" class="btn btn-verde">Editar</a>
+                            <a href="includes/edit.php?id=<?php echo $agendamento['id']; ?>" class="btn btn-verde">Editar</a>
                             <a href="includes/delete.php?id=<?php echo $agendamento['id']; ?>" class="btn btn-vermelho"
                                 onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">
                                 Cancelar

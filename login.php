@@ -1,4 +1,9 @@
 <?php
+/*
+Formulário utilizando password_verify() para verificar se a senha digitada é igual a senha (hash) guardada no banco
+Caso for bem sucedido cria o session e redireciona para o index.php
+*/
+
 session_start();
 include 'includes/config.php';
 $mensagem_erro = '';
